@@ -7,3 +7,7 @@ collection of bash commands which may be useful
 Sort a file (which has content per line) and then output as single line
 
 ```sort file | tr '\n' ' '```
+
+Copy ACL
+
+```getfacl source-folder | setfacl --set-file=- target-folder```

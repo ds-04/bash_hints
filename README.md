@@ -15,3 +15,7 @@ Words seperated by spaces in a file - convert to per line and sorted
 Copy ACL
 
 ```getfacl source-folder | setfacl --set-file=- target-folder```
+
+Replace with sed recursively (from current directory)
+
+```find . -type f -exec sed -i 's/old/new/g' {} +```

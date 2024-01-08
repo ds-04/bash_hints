@@ -19,3 +19,7 @@ Copy ACL
 Replace with sed recursively (from current directory)
 
 ```find . -type f -exec sed -i 's/old/new/g' {} +```
+
+Find and count files in directories... using a CWD, which ONLY contains directories (note the ls -1 used to feed from CWD).
+
+```ls -1 | while read -r dir; do printf "%s:\t" "$dir"; find "$dir" -type f | wc -l; done```

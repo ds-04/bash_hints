@@ -23,3 +23,7 @@ Replace with sed recursively (from current directory)
 Find and count files in directories... using a CWD, which ONLY contains directories (note the ls -1 used to feed from CWD).
 
 ```ls -1 | while read -r dir; do printf "%s:\t" "$dir"; find "$dir" -type f | wc -l; done```
+
+Add first colume of numbers in file without using bc, but awk
+
+```awk '{s+=$1} END {print s}' some_filename``

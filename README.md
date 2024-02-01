@@ -31,3 +31,7 @@ Find and count files in directories... using a CWD, which ONLY contains director
 Add first colume of numbers in file without using bc, but awk
 
 ```awk '{s+=$1} END {print s}' some_filename```
+
+...an alternative to the last command
+
+```awk '{ sum+=$1;print $1} END {print "Sum";print sum}' some_filename```

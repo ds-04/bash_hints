@@ -32,6 +32,6 @@ Add first colume of numbers in file without using bc, but awk
 
 ```awk '{s+=$1} END {print s}' some_filename```
 
-...an alternative to the last command, numbers printerd for each line and final total.
+...an alternative to the last command, numbers printed for each line and final total.
 
 ```awk '{ sum+=$1;print $1} END {print "Sum";print sum}' some_filename```

@@ -39,4 +39,4 @@ Add first colume of numbers in file without using bc, but awk
 
 ps - Show top10 CPU utilisation, all processes, apply formatting
 
-ps -Ao user:50,uid,comm,pid,pcpu,tty --sort=-pcpu | head 
+``ps -Ao user:50,uid,comm,pid,pcpu,tty --sort=-pcpu | head ``

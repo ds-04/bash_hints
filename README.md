@@ -35,3 +35,8 @@ Add first colume of numbers in file without using bc, but awk
 ...an alternative to the last command, numbers printed for each line and final total.
 
 ```awk '{ sum+=$1;print $1} END {print "Sum";print sum}' some_filename```
+
+
+ps - Show top10 CPU utilisation, all processes, apply formatting
+
+ps -Ao user:50,uid,comm,pid,pcpu,tty --sort=-pcpu | head 

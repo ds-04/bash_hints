@@ -8,6 +8,11 @@ Assign date to variable, useful for scripts
 
 ``DATE_OF_RUN=$(date +%F_%H_%M)``
 
+Date X days ago
+
+``date +%Y-%m-%d -d '1 day ago'``
+
+
 Sort a file (which has content per line) and then output as single line
 
 ```sort file | tr '\n' ' '```

@@ -12,6 +12,10 @@ Date X days ago
 
 ``date +%Y-%m-%d -d '1 day ago'``
 
+Find files using newer modification time than X days ago.
+
+``find /directory -newermt $(date +%Y-%m-%d -d 'X day ago') -type f``
+
 
 Sort a file (which has content per line) and then output as single line
 

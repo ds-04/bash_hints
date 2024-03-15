@@ -53,3 +53,7 @@ ps - Show top10 CPU utilisation, all processes, apply formatting
 iostat
 
 ``iostat -kxh``
+
+clear page cache (sudo/root)
+
+``sync; echo 1 > /proc/sys/vm/drop_caches``

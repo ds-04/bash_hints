@@ -37,13 +37,17 @@ Find and count files in directories... using a CWD, which ONLY contains director
 
 ```ls -1 | while read -r dir; do printf "%s:\t" "$dir"; find "$dir" -type f | wc -l; done```
 
-Add first colume of numbers in file without using bc, but awk
+Add first column of numbers in file without using bc, but awk
 
 ```awk '{s+=$1} END {print s}' some_filename```
 
 ...an alternative to the last command, numbers printed for each line and final total.
 
 ```awk '{ sum+=$1;print $1} END {print "Sum";print sum}' some_filename```
+
+Remove newlines from file1 to file2
+
+``tr -d '\n' < file.txt > file2.txt``
 
 
 ps - Show top10 CPU utilisation, all processes, apply formatting

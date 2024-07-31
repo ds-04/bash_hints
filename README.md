@@ -61,3 +61,19 @@ iostat
 clear page cache (sudo/root)
 
 ``sync; echo 1 > /proc/sys/vm/drop_caches``
+
+
+
+<h2>sed</h2>
+
+replace comment at the start of line (remove) identified by word baseurl
+
+``sed -e '/baseurl/ s/^#*//' file``
+
+replace content identified by word baseurl
+
+``sed -e '/baseurl/ s/old_words/new_words/' file``
+
+
+
+

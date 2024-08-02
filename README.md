@@ -74,6 +74,8 @@ replace content identified by word baseurl
 
 ``sed -e '/baseurl/ s/old_words/new_words/' file``
 
+comment start of line
 
+``sed -e '/^.*word_to_match*/ s/^/#/' file``
 
 

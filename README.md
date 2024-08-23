@@ -79,3 +79,20 @@ comment start of line
 ``sed -e '/^.*word_to_match*/ s/^/#/' file``
 
 
+
+<h1>re-attach a runnning process to tmux - use at own risk!!!</h1>
+
+Pre-requisite: ``reptyr`` installed in OS.
+
+- Suspend the respective process with ``Ctrl-Z``
+- Background the job using ``bg``
+- Obtain the PID with ``jobs -l``
+- Remove the ownership from the shell using ``disown`` PID
+- Start or enter your tmux/screen session (probably as root)
+- Run ``reptyr`` PID to attach the process to the current shell - you may need ``-T`` if subprocess are present
+
+
+
+
+
+

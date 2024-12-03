@@ -4,6 +4,9 @@ collection of bash commands which may be useful
 <br>
 <br>
 <br>
+
+<h1>date and find</h1>
+
 Assign date to variable, useful for scripts
 
 ``DATE_OF_RUN=$(date +%F_%H_%M)``
@@ -17,6 +20,9 @@ Find files using newer modification time than X days ago.
 ``find /directory -newermt $(date +%Y-%m-%d -d 'X day ago') -type f``
 
 
+<h1>sort</h1>
+
+
 Sort a file (which has content per line) and then output as single line
 
 ```sort file | tr '\n' ' '```
@@ -25,17 +31,27 @@ Words seperated by spaces in a file - convert to per line and sorted
 
 ```cat /tmp/ubuntu_pkgs |  tr " " "\n" | sort```
 
+
+<h1>acl</h1>
+
 Copy ACL
 
 ```getfacl source-folder | setfacl --set-file=- target-folder```
+
+
+<h1>sed recursive</h1>
 
 Replace with sed recursively (from current directory)
 
 ```find . -type f -exec sed -i 's/old/new/g' {} +```
 
+<h1>find and count</h1>
+
 Find and count files in directories... using a CWD, which ONLY contains directories (note the ls -1 used to feed from CWD).
 
 ```ls -1 | while read -r dir; do printf "%s:\t" "$dir"; find "$dir" -type f | wc -l; done```
+
+<h1>bc add</h1>
 
 Add first column of numbers in file without using bc, but awk
 
@@ -45,10 +61,13 @@ Add first column of numbers in file without using bc, but awk
 
 ```awk '{ sum+=$1;print $1} END {print "Sum";print sum}' some_filename```
 
+<h1>remove newlines</h1>
+
 Remove newlines from file1 to file2
 
 ``tr -d '\n' < file.txt > file2.txt``
 
+<h1>system utilisation</h1>
 
 ps - Show top10 CPU utilisation, all processes, apply formatting
 
@@ -62,6 +81,8 @@ clear page cache (sudo/root)
 
 ``sync; echo 1 > /proc/sys/vm/drop_caches``
 
+
+<h1>csv</h1>
 
 sort csv by column 2 and sum by column 2
 

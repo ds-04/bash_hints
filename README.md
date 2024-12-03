@@ -63,6 +63,11 @@ clear page cache (sudo/root)
 ``sync; echo 1 > /proc/sys/vm/drop_caches``
 
 
+sort csv by column 2 and sum by column 2
+
+ ``sort -t ',' -nk 2 ``
+ ``awk -F"," '{print;x+=$2}END{print "Total " x}'``
+
 
 <h2>sed</h2>
 
